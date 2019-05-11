@@ -1,1 +1,225 @@
-<!doctype html><html lang="en"><head><meta name="generator" content="Hexo 3.8.0"><meta charset="UTF-8"><meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1"><meta http-equiv="X-UA-Compatible" content="ie=edge"><link rel="shortcut icon" href="/static/favicon.ico"><title>Cloud</title><link href="/static/css/app.c64eadfc8d3abfc9d85514dba4054813.css" rel="stylesheet"></head><body><div id="app"></div><script type="text/javascript" src="/static/js/manifest.992b63bf2abbf3194771.js"></script><script type="text/javascript" src="/static/js/vendor.e12dc8c9af1f7aa12436.js"></script><script type="text/javascript" src="/static/js/app.bc036f9167871d39aecf.js"></script></body></html>
+
+<!DOCTYPE html>
+<html lang="zh-Hans" class="loading">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>flask基础 - Cloud</title>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="google" content="notranslate">
+    <meta name="keywords" content="DeepMH,"> 
+    <meta name="description" content="flask介绍
+flask是用python基于werkzeug工具箱编写的轻量级Web开发框架。flask本身相当于一个内核，其他几乎所有功能都需要用到扩展，其WSGI工具箱采用Werkzeug(路,"> 
+    <meta name="author" content="QH"> 
+    <link rel="alternative" href="atom.xml" title="Cloud" type="application/atom+xml"> 
+    <link rel="icon" href="/img/favicon.ico"> 
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+    <link rel="stylesheet" href="/css/diaspora.css">
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({
+              google_ad_client: "ca-pub-8691406134231910",
+              enable_page_level_ads: true
+         });
+    </script>
+    <script async custom-element="amp-auto-ads" src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js">
+    </script>
+</head>
+</html>
+<body class="loading">
+    <span id="config-title" style="display:none">Cloud</span>
+    <div id="loader"></div>
+    <div id="single">
+    <div id="top" style="display: block;">
+    <div class="bar" style="width: 0;"></div>
+    <a class="icon-home image-icon" href="javascript:;" data-url="https://haoqianpro.github.io"></a>
+    <div title="播放/暂停" class="icon-play"></div>
+    <h3 class="subtitle">flask基础</h3>
+    <div class="social">
+        <!--<div class="like-icon">-->
+            <!--<a href="javascript:;" class="likeThis active"><span class="icon-like"></span><span class="count">76</span></a>-->
+        <!--</div>-->
+        <div>
+            <div class="share">
+                <a title="获取二维码" class="icon-scan" href="javascript:;"></a>
+            </div>
+            <div id="qr"></div>
+        </div>
+    </div>
+    <div class="scrollbar"></div>
+</div>
+
+    <div class="section">
+        <div class="article">
+    <div class="main">
+        <h1 class="title">flask基础</h1>
+        <div class="stuff">
+            <span>一月 20, 2019</span>
+            
+  <ul class="post-tags-list"><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/flask/">flask</a></li></ul>
+
+
+        </div>
+        <div class="content markdown">
+            <h4 id="flask介绍"><a href="#flask介绍" class="headerlink" title="flask介绍"></a>flask介绍</h4><ul>
+<li><p><code>flask</code>是用<code>python</code>基于<code>werkzeug</code>工具箱编写的轻量级Web开发框架。<code>flask</code>本身相当于一个内核，其他几乎所有功能都需要用到扩展，其<code>WSGI</code>工具箱采用<code>Werkzeug</code>(路由模块)，模板引擎使用<code>Jinja2</code>。</p>
+</li>
+<li><p>使用<code>virtualenvwrapper</code>创建，管理虚拟环境</p>
+</li>
+<li><p><code>python</code>项目中必须包含一个<code>requirements.txt</code>文件，用于记录所有依赖包及其精确的版本号，以便在新环境中部署。在虚拟环境中使用以下命令将当前虚拟环境中的依赖包及版本号生成至文件中。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip freeze &gt; requirements.txt</span><br></pre></td></tr></table></figure>
+<p>恢复部署环境：将<code>requirements.txt</code>复制到新项目中</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install -r requirements.txt</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>flask程序运行过程</p>
+<ul>
+<li>当客户端想要获取资源时，一般会通过浏览器发起HTTP请求</li>
+<li>此时，Web服务器会把来自客户端的请求都交给Flask程序</li>
+<li>程序实例使用<code>Werkzeug</code>来做路由分发(URL请求和驶入函数之间的关系)</li>
+<li>根据每个URL请求，找到具体的试图函数并请求调用<ul>
+<li>在Flask中，路由一般通过装饰器实现</li>
+</ul>
+</li>
+<li>Flask调用视图函数后，可以返回两种内容<ul>
+<li>字符串内容：将视图函数的返回值作为相应的内容，返回个客户端(浏览器)</li>
+<li>HTML模板内容：获取到数据后，把数据传入HTML模板文件中，模板引擎负责渲染模板，然后将生成的页面返回给客户端</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="请求方式"><a href="#请求方式" class="headerlink" title="请求方式"></a>请求方式</h4><ul>
+<li><p><code>flask</code>中定义路由是通过装饰器实现的</p>
+</li>
+<li><p>路由默认只支持GET，如果需要增加，需要自行指定</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@app.route('/',methods=['GET','POST'])</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h4 id="注册路由"><a href="#注册路由" class="headerlink" title="注册路由"></a>注册路由</h4><ul>
+<li><p>在Flask应用中，路由是指用户请求的URL与视图函数之间的映射。Flask框架 根据HTTP请求的URL在路由表中匹配预定义的URL规则，找到对应的视图函数， 并将视图函数的执行结果返回WSGI服务器。路由表的内容是由应用开发者填充。</p>
+</li>
+<li><p><code>flask</code>中的路由使用<code>toute</code>装饰器实现。</p>
+</li>
+<li><p>另一种等价的写法是使用<code>add_url_rule</code>函数，函数原型为</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">add_url_rule(urle,endpoint=<span class="keyword">None</span>,view_func=<span class="keyword">None</span>,provide_automatic_options=<span class="keyword">None</span>,**options)</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h4 id="动态路由"><a href="#动态路由" class="headerlink" title="动态路由"></a>动态路由</h4><ul>
+<li>有时我们需要将同一类URL映射到同一个视图函数处理<code>&lt;converter:variable_name&gt;</code>，需要在视图函数中填入相应的参数名<code>converter</code>包含<ul>
+<li><code>string</code>接受没有斜杠的’/‘的文本</li>
+<li><code>int</code>接受整数</li>
+<li><code>float</code>接受整数和浮点数</li>
+<li><code>path</code>接受含’/‘的字符串</li>
+<li><code>uuid</code>只接受uuid的字符串</li>
+<li><code>any</code>可以指定多种路径，但是需要传入参数</li>
+</ul>
+</li>
+</ul>
+<h4 id="访问点"><a href="#访问点" class="headerlink" title="访问点"></a>访问点</h4><ul>
+<li>在<code>flask</code>框架中，请求任务的分发并不是直接从用户请求的URL一步定位到视图函数，而是通过访问点<code>endpoint</code></li>
+<li>在<code>flask</code>内部维护着两张维护路由，<code>url_map</code>，<code>view_functions</code><ul>
+<li><code>url_map</code>维护URL规则和<code>endpoint</code>之间的映射</li>
+<li><code>view_functions</code>维护<code>endpoint</code>和视图函数之间的映射</li>
+</ul>
+</li>
+<li>处理请求时，先根据<code>url_map</code>找到对应的<code>endpoint</code>，然后根据<code>view_functions</code>找到对应的视图函数。</li>
+<li>可以在注册路由时自定义访问点</li>
+</ul>
+<h4 id="构造URL"><a href="#构造URL" class="headerlink" title="构造URL"></a>构造URL</h4><ul>
+<li><p><code>url_for</code>函数用于构建指定函数的URL</p>
+</li>
+<li><p><code>url_for</code>的操作对象是函数，而不是<code>route</code>里的路径</p>
+</li>
+<li><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">url_for(endpoint,**values)</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+
+            <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
+            <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
+                <source type="audio/mpeg" src="">
+            </audio>
+            
+                <ul id="audio-list" style="display:none">
+                    
+                        <li title="0" data-url="http://link.hhtjim.com/163/5146554.mp3"></li>
+                    
+                        <li title="1" data-url="http://link.hhtjim.com/qq/001faIUs4M2zna.mp3"></li>
+                    
+                </ul>
+            
+        </div>
+        
+    <div id="gitalk-container" class="comment link" data-ae="false" data-ci="" data-cs="" data-r="" data-o="" data-a="" data-d="false">查看评论</div>
+
+
+    </div>
+    
+</div>
+
+
+    </div>
+</div>
+</body>
+<script src="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script src="//lib.baomitu.com/jquery/1.8.3/jquery.min.js"></script>
+<script src="/js/plugin.js"></script>
+<script src="/js/diaspora.js"></script>
+<link rel="stylesheet" href="/photoswipe/photoswipe.css">
+<link rel="stylesheet" href="/photoswipe/default-skin/default-skin.css">
+<script src="/photoswipe/photoswipe.min.js"></script>
+<script src="/photoswipe/photoswipe-ui-default.min.js"></script>
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <!--  Controls are self-explanatory. Order can be changed. -->
+                <div class="pswp__counter"></div>
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+</html>
