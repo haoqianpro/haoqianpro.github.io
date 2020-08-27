@@ -1,0 +1,165 @@
+:root {
+    --primary-color: #71b3dd;
+    --primary-dark-color: #4489b5;
+    --text-color-gray: #8b979f;
+    --text-color-light-gray: #c1c7cb;
+    --text-color-dark-gray: #5a6f7c;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    box-sizing: border-box;
+    font-family: "Raleway", "PingFang SC" "Microsolf Yahei";
+}
+
+.wrapper {
+    height: 100vh;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+}
+
+.profile-card {
+    width: 627px;
+    height: 374px;
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    column-gap: 12px;
+    box-shadow: 0 0 22px 3px rgba(0, 0, 0, .18);
+}
+
+.profile-image {
+    grid-column: 8 / 13;
+    height: 374px;
+    overflow: hidden;
+}
+
+.profile-image img {
+    height: 397px;
+}
+.profile-content {
+    grid-column: 1 / 8;
+    padding: 38px 28px 20px 33px;
+    position: relative;
+}
+
+nav {
+    position: relative;
+    margin-bottom: 24px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text-color-gray);
+}
+
+nav a:not(:last-child) {
+    margin-right: 40px;
+}
+
+nav a.active {
+    color: var(--primary-dark-color);
+}
+nav .indicator {
+    height: 2px;
+    background: var(--primary-dark-color);
+    position: absolute;
+    left: 0;
+    bottom: -7px;
+    transition: .4s;
+}
+.profile-content section {
+    opacity: 0;
+    transition: .3s ease-out;
+
+    position: absolute;
+    left: 33px;
+    top: 82px;
+}
+.profile-content .active-section {
+    opacity: 1;
+}
+.title {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+.title h1 {
+    font-size: 2rem;
+    font-weight: 500;
+}
+.title p {
+    color: var(--text-color-gray);
+    margin-top: 5px;
+}
+.title .follow-btn {
+    border: none;
+    border-radius: 3px;
+    color: white;
+    background: var(--primary-color);
+    height: 30px;
+    line-height: 30px;
+    font-size: 16px;
+    padding: 0 27px;
+    justify-self: end;
+}
+.title .follow-btn i {
+    margin-right: 2px;
+}
+.info {
+    color: var(--text-color-dark-gray);
+    font-weight: 300px;
+    height: 187px;
+    padding: 24px 0 0 0;
+    overflow: auto;
+    text-indent: 28px;
+}
+footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+footer ul {
+    display: flex;
+}
+footer ul li {
+    list-style: none;
+}
+footer ul li:not(:last-child) {
+    margin-right: 40px;
+}
+footer ul li a { 
+    text-decoration: none;
+    color: var(--primary-color);
+}
+footer ul .fab {
+    font-size: 24px;
+}
+.work-exps {
+    display: grid;
+    grid-template-rows: repeat(3,minmax(80px,auto));
+    color: var(--text-color-gray);
+    align-items: center;
+    justify-items: center;
+}
+.work-exp-item {
+    display: grid;
+    grid-template-columns: 5fr 1fr 7fr;
+    align-items: center;
+    justify-items: center;
+}
+.work-position {
+    font-size: 18px;
+    font-weight: 300;
+}
+.separator {
+    height: 43px;
+    border-left: 2px dotted #eaeff2;
+}
+.time i {
+    margin-left: 5px;
+}
+.company {
+    margin-top: 3px;
+}
