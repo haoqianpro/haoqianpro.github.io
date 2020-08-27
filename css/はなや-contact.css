@@ -1,0 +1,114 @@
+
+
+.contact-container {
+    width: 1101px;
+    margin-bottom: 94px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.part {
+    width: 354px;
+    height: 427px;
+    text-align: center;
+}
+
+.part h2 {
+    font-size: 32px;
+    text-align: center;
+    margin-top: 32px;
+    margin-bottom: 40px;
+}
+
+.part p {
+    text-align: center;
+    line-height: 23px;
+    margin-bottom: 30px;
+}
+
+.part .iconfont {
+    font-family: "iconfont";
+    font-size: 74px;
+    color: #eb7a67;
+    line-height: 74px;
+}
+
+.store-container button {
+    border: none;
+    outline: none;
+    background: transparent;
+    color: #eb7a67;
+    font-size: 18px;
+    width: 111px;
+    height: 45px;
+    cursor: pointer;
+}
+
+.contact-container .line {
+    width: 2px;
+    height: 427px;
+    background: #eb7a67;
+}
+
+.contact-form {
+    background: #D1D0AA;
+}
+
+.form-container {
+    height: 327px;
+    width: 991px;
+    overflow: hidden;
+    position: relative;
+}
+
+.contact-form p {
+    color: #ffffff;
+    line-height: 23px;
+    margin-top: 41px;
+    margin-bottom: 15px;
+}
+
+.contact-form textarea {
+    width: 421px;
+    height: 141px;
+    resize: none;
+    outline: none;
+    border: 1px solid white;
+    background: transparent;
+}
+
+.contact-form .small {
+    width: 421px;
+    height: 141px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-right: 40px;
+}
+
+.small input {
+    height: 40px;
+    font-size: 14px;
+    color: white;
+    outline: none;
+    border: 1px solid white;
+    background: transparent;
+}
+
+.contact-form .big {
+    display: flex;
+}
+
+.contact-form .submit {
+    position: absolute;
+    top: 233px;
+    left: 812px;
+    width: 80px;
+    height: 30px;
+    outline: none;
+    border: none;
+    background: #eb7a67;
+    color: white;
+    cursor: pointer;
+
+}

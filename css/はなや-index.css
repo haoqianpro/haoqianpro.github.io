@@ -1,0 +1,144 @@
+
+.banner-container {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+}
+
+.banner-container img {
+    width: 1440px;
+    height: 600px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-720px);
+}
+
+.collection-container .title p{
+    font-size: 40px;
+    color: #eb7a67;
+    text-align-last: center;
+    margin-top: 103px;
+}
+
+.collection {
+    width: 1101px;
+    margin-top: 96px;
+}
+
+.collection ul {
+    display: flex;
+}
+
+.collection img {
+    width: 325px;
+    height: 300px;
+}
+
+.collection li:not(:last-child) {
+    margin-right: 63px;
+}
+
+.view-btn-container {
+    margin-top: 61px;
+    margin-bottom: 76px;
+    text-align-last: center;
+}
+
+button {
+    display: inline-block;
+    width: 212px;
+    height: 60px;
+    color: #eb7a67;
+    outline: none;
+    background: none;
+    border: 2px solid #eb7a67;
+    cursor: pointer;
+}
+
+.view-btn-container button:hover {
+    background: #eb7a67;
+    color: #ffffff;
+}
+
+.middle-text-container {
+    background: #D1D0AA;
+    height: 140px;
+    overflow: hidden;
+}
+
+.middle-text-container p {
+    font-size: 24px;
+    font-style: italic;
+    text-align: center;
+    line-height: 35px;
+}
+
+.middle-text-container p:first-child {
+    margin-top: 33px;
+}
+
+.article-container section {
+    height: 724px;
+    display: flex;
+}
+.word-part, .img-part {
+    box-sizing: border-box;
+}
+.article-container .word-part {
+    padding: 82px 70px;
+    width: 50%;
+}
+
+.article-container .left-part {
+    order: 0;
+}
+
+.article-container .right-part {
+    order: 1;
+}
+
+.article-container .img-part {
+    width: 50%;
+}
+
+.word-part .title {
+    margin-bottom: 47px;
+}
+
+.word-part .title h2{
+    font-size: 32px;
+    line-height: 46px;
+    color: #eb7a67;
+    font-weight: 300;
+}
+
+.word-part .article {
+    margin-bottom: 43px;
+    width: 441px;
+}
+
+.word-part p {
+    font-size: 18px;
+}
+
+.word-part button {
+    font-size: 16px;
+}
+
+.img-part {
+    overflow: hidden;
+    position: relative;
+}
+
+.left-part img {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.right-part img {
+    position: absolute;
+    top: 0;
+    left: 0;
+}

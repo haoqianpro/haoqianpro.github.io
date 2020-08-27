@@ -1,0 +1,22 @@
+
+.main img {
+    width: 325px;
+    height: 300px;
+}
+
+.main .flowers-container {
+    width: 1101px;
+    margin-bottom: 58px;
+}
+
+.main ul {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3,1fr);
+    column-gap: 63px;
+    row-gap: 61px;
+}
+
+.main .flower-price {
+    color: #eb7a67;
+}

@@ -1,0 +1,12 @@
+html, body, div, ul, li, p, h1, h2{
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
