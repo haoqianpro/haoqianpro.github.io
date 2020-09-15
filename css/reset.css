@@ -1,0 +1,50 @@
+body, h1, ul, header, main, p, span{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font: 16px;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #000;
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+@font-face {
+font-family: "MachowDemo-6Yjoq";
+    src: url("MachowDemo-6Yjoq.woff2") format("woff2"),
+        url("MachowDemo-6Yjoq.woff") format("woff"),
+        url("MachowDemo-6Yjoq.ttf") format("truetype"),
+        url("MachowDemo-6Yjoq.eot") format("embedded-opentype"),
+        url("MachowDemo-6Yjoq.svg") format("svg");
+}
+
+@font-face {
+font-family: "Deuglas-6Ynq6";
+    src: url("Deuglas-6Ynq6.woff2") format("woff2"),
+        url("Deuglas-6Ynq6.woff") format("woff"),
+        url("Deuglas-6Ynq6.ttf") format("truetype"),
+        url("Deuglas-6Ynq6.eot") format("embedded-opentype"),
+        url("Deuglas-6Ynq6.svg") format("svg");
+}
+
+@font-face {
+    font-family: 'iconfont';  /* project id 2068919 */
+    src: url('https://at.alicdn.com/t/font_2068919_wk6a839k8tm.eot');
+    src: url('https://at.alicdn.com/t/font_2068919_wk6a839k8tm.eot?#iefix') format('embedded-opentype'),
+    url('https://at.alicdn.com/t/font_2068919_wk6a839k8tm.woff2') format('woff2'),
+    url('https://at.alicdn.com/t/font_2068919_wk6a839k8tm.woff') format('woff'),
+    url('https://at.alicdn.com/t/font_2068919_wk6a839k8tm.ttf') format('truetype'),
+    url('https://at.alicdn.com/t/font_2068919_wk6a839k8tm.svg#iconfont') format('svg');
+}
