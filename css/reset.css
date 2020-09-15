@@ -23,20 +23,20 @@ li {
 
 @font-face {
 font-family: "MachowDemo-6Yjoq";
-    src: url("MachowDemo-6Yjoq.woff2") format("woff2"),
-        url("MachowDemo-6Yjoq.woff") format("woff"),
-        url("MachowDemo-6Yjoq.ttf") format("truetype"),
-        url("MachowDemo-6Yjoq.eot") format("embedded-opentype"),
-        url("MachowDemo-6Yjoq.svg") format("svg");
+    src: url("../typeface/MachowDemo-6Yjoq.woff2") format("woff2"),
+        url("../typeface/MachowDemo-6Yjoq.woff") format("woff"),
+        url("../typeface/MachowDemo-6Yjoq.ttf") format("truetype"),
+        url("../typeface/MachowDemo-6Yjoq.eot") format("embedded-opentype"),
+        url("../typeface/MachowDemo-6Yjoq.svg") format("svg");
 }
 
 @font-face {
 font-family: "Deuglas-6Ynq6";
-    src: url("Deuglas-6Ynq6.woff2") format("woff2"),
-        url("Deuglas-6Ynq6.woff") format("woff"),
-        url("Deuglas-6Ynq6.ttf") format("truetype"),
-        url("Deuglas-6Ynq6.eot") format("embedded-opentype"),
-        url("Deuglas-6Ynq6.svg") format("svg");
+    src: url("../typeface/Deuglas-6Ynq6.woff2") format("woff2"),
+        url("../typeface/Deuglas-6Ynq6.woff") format("woff"),
+        url("../typeface/Deuglas-6Ynq6.ttf") format("truetype"),
+        url("../typeface/Deuglas-6Ynq6.eot") format("embedded-opentype"),
+        url("../typeface/Deuglas-6Ynq6.svg") format("svg");
 }
 
 @font-face {
