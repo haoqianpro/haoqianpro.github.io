@@ -6,47 +6,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>我们的火,要把世界都点燃</title>
   <script src="script/dayjs.js"></script>
-  <style>
-    body {
-      width: 100vw;
-      height: 100vh;
-      margin: 0;
-      background: url(image/lina-kivaka.jpg) no-repeat left bottom/cover;
-
-      display: flex;
-      justify-content: flex-end;
-      align-items: flex-end;
-    }
-    div {
-      margin-right: 25px;
-      margin-bottom: 25px;
-      font-size: 18px;
-      color: white;
-    }
-    div span {
-      text-decoration: underline;
-    }
-    #workCount {
-      font-size: 36px;
-    }
-  </style>
+  <link rel="stylesheet" href="style/style.css">
 </head>
 <body>
 
-  <div>今天是 <span id="today"></span>, 参加工作的第 <span id="workCount"></span>天</div>
+  <!-- 工作时间文字 -->
+  <div id="workWord">今天是 <span id="today"></span>, 参加工作的第 <span id="workCount"></span>天</div>
 
-  <script>
-    const BEGAIN_WORK_DATE_STRING = '2022-05-11'
-    const begainWorkDate = dayjs(BEGAIN_WORK_DATE_STRING)
-    const today = dayjs()
+  <!-- 隐藏区域 -->
+  <div class="poetry">
 
-    const workCount = today.diff(begainWorkDate, 'day') + 1
+    <div class="item">
+      <h4>无题</h4>
+      <p>念经，念经，一天到晚念经</p>
+      <p>还以为嬴政刘彻重在，汉唐远迈</p>
+      <p>狗屁，一班小丑，搁那自嗨</p>
+    </div>
 
-    const span_today = document.getElementById('today')
-    span_today.innerText = today.format('YYYY年MM月DD日')
+    <div class="item">
+      <h4>题新中国</h4>
+      <p>要我说，不新，不新，还是旧的满清</p>
+    </div>
+    
+  </div>
 
-    const span_workCount = document.getElementById('workCount')
-    span_workCount.innerText = workCount
-  </script>
+  <script src="script/script.js"></script>
 </body>
 </html>
