@@ -2,7 +2,7 @@ body {
   width: 100vw;
   height: 100vh;
   margin: 0;
-  background: url(../image/lina-kivaka.jpg) no-repeat left bottom/cover;
+  background: url(../image/back.jpg) no-repeat left bottom/cover;
 
   display: flex;
   justify-content: flex-end;
