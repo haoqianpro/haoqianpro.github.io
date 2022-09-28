@@ -6,11 +6,26 @@ body {
 
   display: flex;
   justify-content: flex-end;
-  align-items: flex-end;
+  /* justify-content: flex-end;
+  align-items: flex-end; */
 }
+
+body p {
+  padding: 16px;
+  margin: 0;
+  letter-spacing: 3px;
+  writing-mode: vertical-rl;
+  font-size: 24px;
+  line-height: 60px;
+  color: #f9f7f7;
+}
+
 #workWord {
-  margin-right: 5vw;
-  margin-bottom: 5vh;
+  position: absolute;
+  /* margin-right: 5vw;
+  margin-bottom: 5vh; */
+  left: 5vw;
+  bottom: 5vh;
   font-size: 18px;
   color: white;
 }
