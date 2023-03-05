@@ -4,36 +4,52 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>或许是不知梦的缘故，流离之人追逐幻影。</title>
-    <script src="script/dayjs.js"></script>
-    <link rel="stylesheet" href="style/style.css" />
+    <title>李梧歌</title>
+    <link rel="shortcut icon" href="./zhuyu.png" type="image/x-icon" />
+    <style>
+      html,
+      body {
+        height: 100%;
+      }
+      body {
+        margin: 0;
+        background-image: linear-gradient(to top, #96fbc4 0%, #f9f586 100%);
+      }
+      header {
+        height: 60px;
+        padding: 0 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #fff;
+      }
+      .logo {
+        height: 40px;
+      }
+      .logo img {
+        height: 100%;
+      }
+      .nav-list {
+        list-style: none;
+        display: flex;
+      }
+      .nav-item {
+        margin: 0 10px;
+      }
+    </style>
   </head>
   <body>
-    <!-- 工作时间文字 -->
-    <div id="workWord" style="display: none">
-      今天是 <span id="today"></span>, 参加工作的第
-      <span id="workCount"></span>天
-    </div>
-
-    <p>孤单得连星星也想坠落。</p>
-    <p>
-      可即使有那么一天，他披挂着漫天的星辰归来,<br />可是仰望天空的瞳孔已经不在，看星星的女孩已经走了，<br />那璀璨又有什么意思呢？
-    </p>
-    <p>他想自己在她眼里出现的时候，璀璨如星辰。</p>
-    <!-- 隐藏区域 -->
-    <!-- <div class="poetry">
-
-    <div class="item">
-      <h4>定风波·莫听穿林打叶声 --苏轼</h4>
-      <p>莫听穿林打叶声，何妨吟啸且徐行。</p>
-      <p>竹杖芒鞋轻胜马，谁怕？</p>
-      <p>一蓑烟雨任平生。</p>
-      <p>料峭春风吹酒醒，微冷，山头斜照却相迎。</p>
-      <p>回首向来萧瑟处，归去，也无风雨也无晴。</p>
-    </div>
-    
-  </div> -->
-
-    <script src="script/script.js"></script>
+    <header>
+      <div class="logo">
+        <img src="./zhuyu.png" alt="logo" />
+      </div>
+      <nav class="nav">
+        <ul class="nav-list">
+          <li class="nav-item">首页</li>
+          <li class="nav-item">作品</li>
+          <li class="nav-item">我的</li>
+        </ul>
+      </nav>
+    </header>
   </body>
 </html>
